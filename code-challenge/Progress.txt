@@ -1,0 +1,134 @@
+﻿05/02/2021, 22:00
+Added project git
+
+PS C:\projects\sr-code-challenge-dotnet> git init
+Initialized empty Git repository in C:/Projects/sr-code-challenge-dotnet/.git/
+PS C:\projects\sr-code-challenge-dotnet> git add .
+PS C:\projects\sr-code-challenge-dotnet> git commit -m "Initial commit"
+[master (root-commit) 7045772] Initial commit
+ 84 files changed, 43169 insertions(+)
+ create mode 100644 .vs/code-challenge/DesignTimeBuild/.dtbcache.v2
+ create mode 100644 .vs/code-challenge/config/applicationhost.config
+ create mode 100644 .vs/code-challenge/v16/.suo
+ create mode 100644 ReadMe.md
+ create mode 100644 _config.yml
+ create mode 100644 code-challenge.Tests/EmployeeControllerTests.cs
+ create mode 100644 code-challenge.Tests/Extensions/HttpResponseMessageExtensions.cs
+ create mode 100644 code-challenge.Tests/Helpers/JsonSerializer.cs
+ create mode 100644 code-challenge.Tests/TestServerStartup.cs
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/appsettings.Development.json
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/appsettings.json
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/code-challenge.Tests.Integration.deps.json
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/code-challenge.Tests.Integration.dll
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/code-challenge.Tests.Integration.pdb
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/code-challenge.Tests.Integration.runtimeconfig.dev.json
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/code-challenge.Tests.Integration.runtimeconfig.json
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/code-challenge.dll
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/code-challenge.pdb
+ create mode 100644 code-challenge.Tests/bin/Debug/netcoreapp2.1/resources/EmployeeSeedData.json
+ create mode 100644 code-challenge.Tests/code-challenge.Tests.Integration.csproj
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/.NETCoreApp,Version=v2.1.AssemblyAttributes.cs
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.AssemblyInfo.cs
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.AssemblyInfoInputs.cache
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.Program.cs
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.assets.cache
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.csproj.CopyComplete
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.csproj.CoreCompileInputs.cache
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.csproj.FileListAbsolute.txt
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.csprojAssemblyReference.cache
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.dll
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.genruntimeconfig.cache
+ create mode 100644 code-challenge.Tests/obj/Debug/netcoreapp2.1/code-challenge.Tests.Integration.pdb
+ create mode 100644 code-challenge.Tests/obj/code-challenge.Tests.Integration.csproj.nuget.dgspec.json
+ create mode 100644 code-challenge.Tests/obj/code-challenge.Tests.Integration.csproj.nuget.g.props
+ create mode 100644 code-challenge.Tests/obj/code-challenge.Tests.Integration.csproj.nuget.g.targets
+ create mode 100644 code-challenge.Tests/obj/project.assets.json
+ create mode 100644 code-challenge.Tests/obj/project.nuget.cache
+ create mode 100644 code-challenge.Tests/resources/EmployeeSeedData.json
+ create mode 100644 code-challenge.sln
+ create mode 100644 code-challenge/Controllers/EmployeeController.cs
+ create mode 100644 code-challenge/Controllers/ReportingStructureController.cs
+ create mode 100644 code-challenge/Data/EmployeeContext.cs
+ create mode 100644 code-challenge/Data/EmployeeDataSeeder.cs
+ create mode 100644 code-challenge/LICENSE
+ create mode 100644 code-challenge/Models/Employee.cs
+ create mode 100644 code-challenge/Models/ReportingStructure.cs
+ create mode 100644 code-challenge/Program.cs
+ create mode 100644 code-challenge/Properties/launchSettings.json
+ create mode 100644 code-challenge/Repositories/EmployeeRespository.cs
+ create mode 100644 code-challenge/Repositories/IEmployeeRepository.cs
+ create mode 100644 code-challenge/Services/EmployeeService.cs
+ create mode 100644 code-challenge/Services/IEmployeeService.cs
+ create mode 100644 code-challenge/bin/Debug/netcoreapp2.1/code-challenge.deps.json
+ create mode 100644 code-challenge/bin/Debug/netcoreapp2.1/code-challenge.dll
+ create mode 100644 code-challenge/bin/Debug/netcoreapp2.1/code-challenge.pdb
+ create mode 100644 code-challenge/bin/Debug/netcoreapp2.1/code-challenge.runtimeconfig.dev.json
+ create mode 100644 code-challenge/bin/Debug/netcoreapp2.1/code-challenge.runtimeconfig.json
+ create mode 100644 code-challenge/bin/Debug/netcoreapp2.1/resources/EmployeeSeedData.json
+ create mode 100644 code-challenge/code-challenge.csproj
+ create mode 100644 code-challenge/code-challenge.csproj.user
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/.NETCoreApp,Version=v2.1.AssemblyAttributes.cs
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/code-challenge.AssemblyInfo.cs
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/code-challenge.AssemblyInfoInputs.cache
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/code-challenge.csproj.CoreCompileInputs.cache
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/code-challenge.csproj.FileListAbsolute.txt
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/code-challenge.csprojAssemblyReference.cache
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/code-challenge.dll
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/code-challenge.genruntimeconfig.cache
+ create mode 100644 code-challenge/obj/Debug/netcoreapp2.1/code-challenge.pdb
+ create mode 100644 code-challenge/obj/code-challenge.csproj.nuget.dgspec.json                                           create mode 100644 code-challenge/obj/code-challenge.csproj.nuget.g.props                                               create mode 100644 code-challenge/obj/code-challenge.csproj.nuget.g.targets                                             create mode 100644 code-challenge/obj/project.assets.json                                                               create mode 100644 code-challenge/obj/project.nuget.cache
+ create mode 100644 code-challenge/resources/EmployeeSeedData.json
+PS C:\projects\sr-code-challenge-dotnet> git tag 0.1.0
+PS C:\projects\sr-code-challenge-dotnet> git remote add origin https://github.com/javadogma/sr-code-challenge-dotnet.git
+
+PS C:\projects\sr-code-challenge-dotnet> git branch -M main
+PS C:\projects\sr-code-challenge-dotnet> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 101, done.
+Counting objects: 100% (101/101), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (81/81), done.
+Writing objects: 100% (101/101), 310.94 KiB | 2.80 MiB/s, done.
+Total 101 (delta 21), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (21/21), done.
+To https://github.com/javadogma/sr-code-challenge-dotnet.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+05/02/2021, 22:19
+Use Curl to hit the end employee endpoint with one of the employee ids.
+
+PS C:\projects\sr-code-challenge-dotnet> curl
+
+cmdlet Invoke-WebRequest at command pipeline position 1
+Supply values for the following parameters:
+Uri: http://localhost:8080/api/employee/16a596ae-edd3-4847-99fe-c4518e82c86f
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"employeeId":"16a596ae-edd3-4847-99fe-c4518e82c86f","firstName":"John","lastName":"Lennon","positi
+                    on":"Development Manager","department":"Engineering","directReports":null}
+RawContent        : HTTP/1.1 200 OK
+                    Transfer-Encoding: chunked
+                    Content-Type: application/json; charset=utf-8
+                    Date: Mon, 03 May 2021 02:18:56 GMT
+                    Server: Kestrel
+                    X-Powered-By: ASP.NET
+
+                    {"employeeId":"16a596ae-edd3-...
+Forms             : {}
+Headers           : {[Transfer-Encoding, chunked], [Content-Type, application/json; charset=utf-8], [Date, Mon, 03 May
+                    2021 02:18:56 GMT], [Server, Kestrel]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 173
+
+
+
+PS C:\projects\sr-code-challenge-dotnet>
