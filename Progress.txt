@@ -180,8 +180,17 @@ Good. The main APIs seem to be working.
 For now, until anything unexpected happens, lets move ahead with the new functionality.
 
 
+11:38 PM Wednesday, March 9, 2022
+---------------------------------
+
+Used postman to add a new employee. Even though the instructions state that the POST takes an employee and returns an employee, the employee ID is created as a result of the add so passing one in doesn't seem to matter.
+
+PS C:\Users\javad> curl.exe http://localhost:8080/api/employee/06b822a3-ee60-4ee8-a91a-4547b1800678
+{"employeeId":"06b822a3-ee60-4ee8-a91a-4547b1800678","firstName":"Nick","lastName":"Bartolotti","position":"Developer I","department":"Engineering","directReports":null}
+PS C:\Users\javad>
 
 
+Since this is an in-memory database this record will be gone the next time around.
 
 
 
