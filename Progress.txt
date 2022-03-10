@@ -135,16 +135,22 @@ RawContentLength  : 173
 
 PS C:\projects\sr-code-challenge-dotnet>
 
+Friday March 4, 2022
+--------------------
+I downloaded the challenge and got off in the weeds thinking it was broken out of the box because /api/employee returned a 404. 
+Went to put it in Git and found that I already had this project in Git from May 2021.
+I pulled that and it had the same behavior.
+
+I played with this for a couple of days getting off into the weeds:
+
+https://devblogs.microsoft.com/dotnet/debugging-asp-net-web-api-with-route-debugger/
+https://dotnettutorials.net/lesson/asp-net-core-launchsettings-json-file/
 
 10:32 PM Wednesday, March 9, 2022
 ---------------------------------
-Revisting this project after reconnecting with Mindex.
-Been looking at this on and off for a few days.
-This time around I jumped the gun a bit and thought the whole web site was broken.
-The web page returned an error and I made some bad assumptions based on that observation.
-Because the folder for this project changed since May, I went to Git to review the changes.
+Decided to push whatever changes I had to git
 Found this file.
-Clues in the file got me back on track.
+Clues from the past work got me back on track.
 The web service does in fact work so let's try the other employee IDs.
 
 
@@ -170,12 +176,10 @@ PS C:\Users\javad>
 PS C:\Users\javad>
 PS C:\Users\javad>
 
+Good. The main APIs seem to be working.
 For now, until anything unexpected happens, lets move ahead with the new functionality.
 
-Couple of web sites that may prove helpful later on (result of my mis-step earlier).
 
-https://devblogs.microsoft.com/dotnet/debugging-asp-net-web-api-with-route-debugger/
-https://dotnettutorials.net/lesson/asp-net-core-launchsettings-json-file/
 
 
 
