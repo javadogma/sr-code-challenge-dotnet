@@ -1,4 +1,6 @@
 ﻿05/02/2021, 22:00
+-----------------
+
 Added project git
 
 PS C:\projects\sr-code-challenge-dotnet> git init
@@ -132,3 +134,52 @@ RawContentLength  : 173
 
 
 PS C:\projects\sr-code-challenge-dotnet>
+
+
+10:32 PM Wednesday, March 9, 2022
+---------------------------------
+Revisting this project after reconnecting with Mindex.
+Been looking at this on and off for a few days.
+This time around I jumped the gun a bit and thought the whole web site was broken.
+The web page returned an error and I made some bad assumptions based on that observation.
+Because the folder for this project changed since May, I went to Git to review the changes.
+Found this file.
+Clues in the file got me back on track.
+The web service does in fact work so let's try the other employee IDs.
+
+
+PS C:\Users\javad> curl.exe http://localhost:8080/api/employee/b7839309-3348-463b-a7e3-5de1c168beb3
+{"employeeId":"b7839309-3348-463b-a7e3-5de1c168beb3","firstName":"Paul","lastName":"McCartney","position":"Developer I","department":"Engineering","directReports":null}
+PS C:\Users\javad>
+PS C:\Users\javad>
+PS C:\Users\javad>
+PS C:\Users\javad> curl.exe http://localhost:8080/api/employee/03aa1462-ffa9-4978-901b-7c001562cf6f
+{"employeeId":"03aa1462-ffa9-4978-901b-7c001562cf6f","firstName":"Ringo","lastName":"Starr","position":"Developer V","department":"Engineering","directReports":null}
+PS C:\Users\javad>
+PS C:\Users\javad>
+PS C:\Users\javad>
+PS C:\Users\javad> curl.exe http://localhost:8080/api/employee/62c1084e-6e34-4630-93fd-9153afb65309
+{"employeeId":"62c1084e-6e34-4630-93fd-9153afb65309","firstName":"Pete","lastName":"Best","position":"Developer II","department":"Engineering","directReports":null}
+PS C:\Users\javad>
+PS C:\Users\javad>
+PS C:\Users\javad>
+PS C:\Users\javad> curl.exe http://localhost:8080/api/employee/c0c2293d-16bd-4603-8e08-638a9d18b22c
+{"employeeId":"c0c2293d-16bd-4603-8e08-638a9d18b22c","firstName":"George","lastName":"Harrison","position":"Developer III","department":"Engineering","directReports":null}
+PS C:\Users\javad>
+PS C:\Users\javad>
+PS C:\Users\javad>
+PS C:\Users\javad>
+
+For now, until anything unexpected happens, lets move ahead with the new functionality.
+
+Couple of web sites that may prove helpful later on (result of my mis-step earlier).
+
+https://devblogs.microsoft.com/dotnet/debugging-asp-net-web-api-with-route-debugger/
+https://dotnettutorials.net/lesson/asp-net-core-launchsettings-json-file/
+
+
+
+
+
+
+

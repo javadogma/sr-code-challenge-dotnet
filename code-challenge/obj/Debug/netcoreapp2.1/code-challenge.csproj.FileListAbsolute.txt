@@ -13,3 +13,19 @@ C:\Users\nbartolotti\Downloads\sr-code-challenge-dotnet (1)\code-challenge\obj\D
 C:\Users\nbartolotti\Downloads\sr-code-challenge-dotnet (1)\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.dll
 C:\Users\nbartolotti\Downloads\sr-code-challenge-dotnet (1)\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.pdb
 C:\Users\nbartolotti\Downloads\sr-code-challenge-dotnet (1)\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.genruntimeconfig.cache
+C:\Projects\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Projects\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Projects\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\resources\EmployeeSeedData.json
+C:\Projects\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.deps.json
+C:\Projects\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.runtimeconfig.json
+C:\Projects\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.runtimeconfig.dev.json
+C:\Projects\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.dll
+C:\Projects\sr-code-challenge-dotnet\code-challenge\bin\Debug\netcoreapp2.1\code-challenge.pdb
+C:\Projects\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.csproj.AssemblyReference.cache
+C:\Projects\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.AssemblyInfoInputs.cache
+C:\Projects\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.AssemblyInfo.cs
+C:\Projects\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.csproj.CoreCompileInputs.cache
+C:\Projects\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.dll
+C:\Projects\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.pdb
+C:\Projects\sr-code-challenge-dotnet\code-challenge\obj\Debug\netcoreapp2.1\code-challenge.genruntimeconfig.cache

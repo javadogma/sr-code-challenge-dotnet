@@ -31,8 +31,7 @@
           "Microsoft.AspNetCore.All": "2.0.6",
           "Microsoft.AspNetCore.JsonPatch": "2.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "2.0.2",
-          "Microsoft.NETCore.App": "2.1.0",
-          "WebApiRouteDebugger": "1.0.0"
+          "Microsoft.NETCore.App": "2.1.0"
         },
         "runtime": {
           "code-challenge.dll": {}
@@ -4076,7 +4075,6 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
-      "WebApiRouteDebugger/1.0.0": {},
       "WindowsAzure.Storage/8.1.4": {
         "dependencies": {
           "Microsoft.Data.OData": "5.8.2",
@@ -6270,13 +6268,6 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
-    },
-    "WebApiRouteDebugger/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-e6e7FlAiCr90txa2uHkBKWU6a4NNnssMQ8/e1uNqQVjrxcgaWf/FoSXGOBHVMfEh6BNXpVUznjV3YFtGWEB//Q==",
-      "path": "webapiroutedebugger/1.0.0",
-      "hashPath": "webapiroutedebugger.1.0.0.nupkg.sha512"
     },
     "WindowsAzure.Storage/8.1.4": {
       "type": "package",

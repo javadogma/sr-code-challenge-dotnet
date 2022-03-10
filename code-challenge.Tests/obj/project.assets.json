@@ -5198,6 +5198,9 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "WebApiRouteDebugger/1.0.0": {
+        "type": "package"
+      },
       "WindowsAzure.Storage/8.1.4": {
         "type": "package",
         "dependencies": {
@@ -5219,7 +5222,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.6",
           "Microsoft.AspNetCore.JsonPatch": "2.0.0",
-          "Microsoft.EntityFrameworkCore.InMemory": "2.0.2"
+          "Microsoft.EntityFrameworkCore.InMemory": "2.0.2",
+          "WebApiRouteDebugger": "1.0.0"
         },
         "compile": {
           "bin/placeholder/code-challenge.dll": {}
@@ -14320,6 +14324,40 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "WebApiRouteDebugger/1.0.0": {
+      "sha512": "e6e7FlAiCr90txa2uHkBKWU6a4NNnssMQ8/e1uNqQVjrxcgaWf/FoSXGOBHVMfEh6BNXpVUznjV3YFtGWEB//Q==",
+      "type": "package",
+      "path": "webapiroutedebugger/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Areas/RouteDebugger/Components/ActionSelectSimulator.cs.pp",
+        "content/Areas/RouteDebugger/Components/DictionaryExtensions.cs.pp",
+        "content/Areas/RouteDebugger/Components/HttpParameterBindingExtensions.cs.pp",
+        "content/Areas/RouteDebugger/Components/TypeHelper.cs.pp",
+        "content/Areas/RouteDebugger/Content/rdstyle.css",
+        "content/Areas/RouteDebugger/Controllers/RouteDebuggerController.cs.pp",
+        "content/Areas/RouteDebugger/InspectActionInvoker.cs.pp",
+        "content/Areas/RouteDebugger/InspectActionSelector.cs.pp",
+        "content/Areas/RouteDebugger/InspectControllerSelector.cs.pp",
+        "content/Areas/RouteDebugger/InspectHandler.cs.pp",
+        "content/Areas/RouteDebugger/Models/ActionSelectionInfo.cs.pp",
+        "content/Areas/RouteDebugger/Models/ActionSelectionLog.cs.pp",
+        "content/Areas/RouteDebugger/Models/ControllerSelectionInfo.cs.pp",
+        "content/Areas/RouteDebugger/Models/HttpParameterDescriptionInfo.cs.pp",
+        "content/Areas/RouteDebugger/Models/InspectData.cs.pp",
+        "content/Areas/RouteDebugger/Models/RouteDataInfo.cs.pp",
+        "content/Areas/RouteDebugger/Models/RouteInfo.cs.pp",
+        "content/Areas/RouteDebugger/RequestHelper.cs.pp",
+        "content/Areas/RouteDebugger/RouteDebuggerAreaRegistration.cs.pp",
+        "content/Areas/RouteDebugger/RouteDebuggerConfig.cs.pp",
+        "content/Areas/RouteDebugger/Scripts/detect.js",
+        "content/Areas/RouteDebugger/Views/RouteDebugger/Index.cshtml.pp",
+        "content/Areas/RouteDebugger/Views/Web.config",
+        "webapiroutedebugger.1.0.0.nupkg.sha512",
+        "webapiroutedebugger.nuspec"
+      ]
+    },
     "WindowsAzure.Storage/8.1.4": {
       "sha512": "W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
       "type": "package",
@@ -14361,7 +14399,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nbartolotti\\.nuget\\packages\\": {}
+    "C:\\Users\\javad\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -14369,11 +14408,15 @@
       "projectUniqueName": "C:\\Projects\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
       "projectName": "code-challenge.Tests.Integration",
       "projectPath": "C:\\Projects\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
-      "packagesPath": "C:\\Users\\nbartolotti\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\javad\\.nuget\\packages\\",
       "outputPath": "C:\\Projects\\sr-code-challenge-dotnet\\code-challenge.Tests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nbartolotti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\javad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -14436,7 +14479,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
