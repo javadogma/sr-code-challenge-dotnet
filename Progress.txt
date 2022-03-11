@@ -193,6 +193,66 @@ PS C:\Users\javad>
 Since this is an in-memory database this record will be gone the next time around.
 
 
+7:12 PM Thursday, March 10, 2022
+--------------------------------
 
+Tonight the goal is to set up the database again and ensure the update (PUT) method is working.
+Switched to using cURL instead of Postman.
+
+// Add the new record
+C:\Projects\sr-code-challenge-dotnet>curl --location --request POST "http://localhost:8080/api/employee/" --header "Content-Type:application/json" --data-raw "{\"firstName\":\"Nick\",\"lastName\":\"Bartolotti\",\"position\":\"Developer I\",\"department\":\"Engineering\",\"directReports\":null}"
+
+// response
+{"employeeId":"2224d373-f9f4-4e02-802e-6f07dfb0cd1b","firstName":"Nick","lastName":"Bartolotti","position":"Developer I","department":"Engineering","directReports":null}
+C:\Projects\sr-code-challenge-dotnet>
+C:\Projects\sr-code-challenge-dotnet>
+C:\Projects\sr-code-challenge-dotnet>
+
+// check the specific user id
+C:\Projects\sr-code-challenge-dotnet>curl.exe http://localhost:8080/api/employee/2224d373-f9f4-4e02-802e-6f07dfb0cd1b
+
+// response
+{"employeeId":"2224d373-f9f4-4e02-802e-6f07dfb0cd1b","firstName":"Nick","lastName":"Bartolotti","position":"Developer I","department":"Engineering","directReports":null}
+C:\Projects\sr-code-challenge-dotnet>
+C:\Projects\sr-code-challenge-dotnet>
+C:\Projects\sr-code-challenge-dotnet>
+
+// update the record to the music department
+C:\Projects\sr-code-challenge-dotnet>curl --location --request PUT "http://localhost:8080/api/employee/2224d373-f9f4-4e02-802e-6f07dfb0cd1b" --header "Content-Type: application/json" --data-raw "{\"firstName\":\"Nick\",\"lastName\":\"Bartolotti\",\"position\":\"Developer I\",\"department\":\"Music\",\"directReports\":null}"
+
+// response
+{"employeeId":"2224d373-f9f4-4e02-802e-6f07dfb0cd1b","firstName":"Nick","lastName":"Bartolotti","position":"Developer I","department":"Music","directReports":null}
+C:\Projects\sr-code-challenge-dotnet>
+C:\Projects\sr-code-challenge-dotnet>
+C:\Projects\sr-code-challenge-dotnet>
+z
+// for shits and giggles query the employee 
+C:\Projects\sr-code-challenge-dotnet>curl.exe http://localhost:8080/api/employee/2224d373-f9f4-4e02-802e-6f07dfb0cd1b
+
+// response
+{"employeeId":"2224d373-f9f4-4e02-802e-6f07dfb0cd1b","firstName":"Nick","lastName":"Bartolotti","position":"Developer I","department":"Music","directReports":null}
+C:\Projects\sr-code-challenge-dotnet>
+
+7:59 PM Thursday, March 10, 2022
+--------------------------------
+
+OK that all seems to work. 
+
+Moving on to the next step, I started to create the ReportingStructure but as it turns out I already added this back in May.
+
+10:21 PM Thursday, March 10, 2022
+---------------------------------
+
+Running new code this is what we see:
+
+// hitting the /api/employee/reports/{id} api we get a ReportingStructure that contains an employee and a count. The number of reports is harde coded for now while the skeleton is put in place.
+C:\Projects\sr-code-challenge-dotnet>curl.exe http://localhost:8080/api/employee/reports/b7839309-3348-463b-a7e3-5de1c168beb3
+{"employee":{"employeeId":"b7839309-3348-463b-a7e3-5de1c168beb3","firstName":"Paul","lastName":"McCartney","position":"Developer I","department":"Engineering","directReports":null},"numberOfReports":277}
+
+// hitting the /api/employee/{id} api we get an employee with no direct reports. This may not be the best implementation because now the Employee has a field that's not really being used for anything useful yet still comes along for the ride with every instance of Employee. It's a bit wasteful.
+C:\Projects\sr-code-challenge-dotnet>curl.exe http://localhost:8080/api/employee/b7839309-3348-463b-a7e3-5de1c168beb3
+{"employeeId":"b7839309-3348-463b-a7e3-5de1c168beb3","firstName":"Paul","lastName":"McCartney","position":"Developer I","department":"Engineering","directReports":null}
+
+For now there's a new controller that responds to the /reports endpoint and executes code to "calculate" the number of direct reports.
 
 

@@ -60,11 +60,17 @@ namespace challenge.Services
             return newEmployee;
         }
 
-        public ReportingStructure GetDirectReports(Employee employee)
+        public ReportingStructure GetDirectReports(string id)
         {
-            if(employee != null)
+            if (!String.IsNullOrEmpty(id))
             {
-                return new ReportingStructure();
+                var employee = _employeeRepository.GetById(id);
+                if (employee != null)
+                {
+                    return employee.GetReportingStructure();
+                }
+
+                return null;
             }
 
             return null;

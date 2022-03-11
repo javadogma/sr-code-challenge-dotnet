@@ -13,5 +13,16 @@ namespace challenge.Models
         public String Position { get; set; }
         public String Department { get; set; }
         public List<Employee> DirectReports { get; set; }
+
+        public ReportingStructure GetReportingStructure() 
+        {
+            ReportingStructure reportingStructure = new ReportingStructure();
+
+            // TODO: calculate this employee's direct reports
+            reportingStructure.Employee = this;
+            reportingStructure.NumberOfReports = 277;
+
+            return reportingStructure;
+        }
     }
 }

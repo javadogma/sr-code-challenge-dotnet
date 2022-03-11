@@ -44,6 +44,19 @@ namespace challenge.Controllers
             return Ok(employee);
         }
 
+        [HttpGet("reports/{id}", Name = "getNumbeOfReports")]
+        public IActionResult GetNumberOfReports(String id)
+        {
+            _logger.LogDebug($"Received employee report request for '{id}'");
+
+            var reportingStructure = _employeeService.GetDirectReports(id);
+
+            if (reportingStructure == null)
+                return NotFound();
+
+            return Ok(reportingStructure);
+        }
+
         [HttpPut("{id}")]
         public IActionResult ReplaceEmployee(String id, [FromBody]Employee newEmployee)
         {
