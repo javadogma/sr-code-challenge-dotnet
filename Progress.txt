@@ -303,6 +303,11 @@ TODO: Research the exception stack.
 Considerations: concurrency, incorrect setup, something else ??
 
 
+1:24 PM Saturday, March 12, 2022
+--------------------------------
+
+Ran the unit tests for the project today to see what's there. Write a test for the new controller and see what information can be discovered.
+
 
 
 
