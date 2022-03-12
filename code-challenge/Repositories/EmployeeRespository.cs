@@ -29,7 +29,16 @@ namespace challenge.Repositories
 
         public Employee GetById(string id)
         {
-            return _employeeContext.Employees.SingleOrDefault(e => e.EmployeeId == id);
+            Employee employee;
+
+            // NDB: There's a problem here getting the employee.
+            // DirectReports can be null when pulling the employee from the employeeContext.
+            // That causes the calculation of the direct reports to barf with a null pointer
+            // exception. 
+            // Find didn't work here. 
+            // employee = _employeeContext.Employees.Find(id);
+            employee = _employeeContext.Employees.SingleOrDefault(e => e.EmployeeId == id);
+            return employee;
         }
 
         public Task SaveAsync()
