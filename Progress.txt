@@ -308,6 +308,18 @@ Considerations: concurrency, incorrect setup, something else ??
 
 Ran the unit tests for the project today to see what's there. Write a test for the new controller and see what information can be discovered.
 
+5:31 PM Sunday, March 13, 2022
+------------------------------
+
+Implemented a unit test for NumberOfReports and it fails as expected. 
+
+Here's a source for for testing and debugging entity frameworks.
+
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/mocking-entity-framework-when-unit-testing-aspnet-web-api-2
+
+
+
+
 
 
 

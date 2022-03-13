@@ -124,7 +124,7 @@ namespace code_challenge.Tests.Integration
             {
                 EmployeeId = "Invalid_Id",
                 Department = "Music",
-                FirstName = "Sunny",
+                FirstName = "Sonny",
                 LastName = "Bono",
                 Position = "Singer/Song Writer",
             };
@@ -138,5 +138,23 @@ namespace code_challenge.Tests.Integration
             // Assert
             Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
         }
+
+        [TestMethod]
+        public void GetDirectReports_Returns_Ok()
+        {
+            // Arrange
+            var employeeId = "16a596ae-edd3-4847-99fe-c4518e82c86f";
+            var expectedDirectReports = 4;
+
+            // Execute
+            var getRequestTask = _httpClient.GetAsync($"api/employee/reports/{employeeId}");
+            var response = getRequestTask.Result;
+
+            // Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            var reportingStructure = response.DeserializeContent<ReportingStructure>();
+            Assert.AreEqual(expectedDirectReports, reportingStructure.NumberOfReports);
+        }
+
     }
 }
