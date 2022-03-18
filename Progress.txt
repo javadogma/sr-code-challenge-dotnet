@@ -318,7 +318,23 @@ Here's a source for for testing and debugging entity frameworks.
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/mocking-entity-framework-when-unit-testing-aspnet-web-api-2
 
 
++		&_employeeContext	0x000001e1802fd970	System.IntPtr*
++		&employeeContext	0x00000080256bd410	System.IntPtr*
 
++		&_employeeContext	0x000001e1802fd970	System.IntPtr*
+
+https://bitiniyan.com/2019/02/02/how-to-write-unit-tests-with-entity-framework-core/
+
+https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli
+
+
+
+9:54 PM Thursday, March 17, 2022
+--------------------------------
+
+Create a new type, Compensation. A Compensation has the following fields: employee, salary, and effectiveDate. Create two new Compensation REST endpoints. One to create and one to read by employeeId. These should persist and query the Compensation from the persistence layer.
+
+So, I'm not sure why a Compensation object would have an employee, salary, and effective date. Seems like salary and effective date are properties of an employee. But -- I can see if compensation was another table in a database that it may be useful to keep this information separate from the employee data and use the employee id as the PK for indexing into that table to find the date and salary. IDK.
 
 
 

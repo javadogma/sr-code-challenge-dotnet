@@ -13,6 +13,8 @@ namespace challenge.Models
         public String Position { get; set; }
         public String Department { get; set; }
         public List<Employee> DirectReports { get; set; }
+        public decimal Salary { get; set; }
+        public DateTime EffectiveDate { get; set; }
 
         public ReportingStructure GetReportingStructure() 
         {
