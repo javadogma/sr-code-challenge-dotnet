@@ -33,27 +33,22 @@ namespace challenge.Controllers
             return Ok(compensation);
         }
 
-        // TODO: Review how the query parameters are retreived from the request.
-        // Decoration needed?
         [HttpPost("{id}", Name = "setCompensation")]
-        public IActionResult SetCompensation(
-            String id,
-            DateTime effectiveDate,
-            decimal salary)
+        public IActionResult SetCompensation([FromBody] CompensationInput compensationInput)
         {
-            _logger.LogDebug($"Received compensation set request for '{id}'");
+            _logger.LogDebug($"Received compensation set request for '{compensationInput.Id}'");
 
             // TODO: validate the incoming variables. Return an error if there is a problem.
 
-            var employee = _employeeService.GetById(id);
-            if(employee != null)
-            {
-                employee.Salary = salary;
-                employee.EffectiveDate = effectiveDate;
+            var employee = _employeeService.GetById(compensationInput.Id);
+            var updatedEmployee = _employeeService.GetById(compensationInput.Id);
 
-                // TODO: have to duplicate the employee into a new object here.
-                // This lets it compile for now.
-                _employeeService.Replace(employee, employee);
+            if (employee != null && updatedEmployee != null)
+            {
+                updatedEmployee.Salary = compensationInput.Salary;
+                updatedEmployee.EffectiveDate = compensationInput.EffectiveDate;
+
+                _employeeService.Replace(employee, updatedEmployee);
             }
 
             Compensation compensation = new Compensation(employee);

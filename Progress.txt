@@ -336,6 +336,20 @@ Create a new type, Compensation. A Compensation has the following fields: employ
 
 So, I'm not sure why a Compensation object would have an employee, salary, and effective date. Seems like salary and effective date are properties of an employee. But -- I can see if compensation was another table in a database that it may be useful to keep this information separate from the employee data and use the employee id as the PK for indexing into that table to find the date and salary. IDK.
 
+9:01 PM Saturday, March 19, 2022
+--------------------------------
+
+Pass the compensation value and the effective date in a POST body. Had to cheese it a little with the CompensationInput model. I think this can be better designed with a bit more thought. Once the controller is in and the Compensation can be set, I'll take another look and see where it can improve.
+
+Back of the napkin guess at this point is the intent is something like this:
+
+1. Get an employee
+2. Get the id of the employee from the response
+3. Get the compensation for the employee
+4. Set the compensation for the employee
+
+Seems a bit messy since the compensation contains an employee. Might have been better if the compensation object returned the employee ID instead of the employee. This would allow the caller to ask for an employee, get the ID, request the compensation with the ID, and have the compensation return with the ID, value, and effective date.
+
 
 
 
