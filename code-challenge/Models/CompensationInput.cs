@@ -8,7 +8,7 @@ namespace challenge.Models
     /// </summary>
     public class CompensationInput
     {
-        private string id;
+//        private string id;
         private decimal _salary;
         private DateTime _effectiveDate;
 
@@ -16,7 +16,7 @@ namespace challenge.Models
         {
         }
 
-        public string Id { get { return id; } set { id = value; } }
+//        public string Id { get { return id; } set { id = value; } }
         public decimal Salary { get { return _salary; } set { _salary = value; } }
         public DateTime EffectiveDate { get { return _effectiveDate; } set { _effectiveDate = value; } }
     }

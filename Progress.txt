@@ -350,6 +350,13 @@ Back of the napkin guess at this point is the intent is something like this:
 
 Seems a bit messy since the compensation contains an employee. Might have been better if the compensation object returned the employee ID instead of the employee. This would allow the caller to ask for an employee, get the ID, request the compensation with the ID, and have the compensation return with the ID, value, and effective date.
 
+6:08 PM Sunday, March 20, 2022
+------------------------------
+
+WIP for the compensation contoller. Moved the id to the query parameters instead of the request body because I think this follows the API convention better.
+
+Found an intersting clue during debugging. The debugger caught an instance where a new thread was used to handle succesive GET requests. This manifested itself in the EmployeeRepository so I think this supports the idea that there is concurrency issue (well, not really concurrency) but unexpected behavior with respect to the EF when requests come in on different threads.
+
 
 
 
