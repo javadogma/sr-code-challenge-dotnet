@@ -24,6 +24,8 @@ namespace challenge.Controllers
             _logger.LogDebug($"Received compensation get request for '{id}'");
 
             var employee = _employeeService.GetById(id);
+            if(employee == null)
+                return NotFound();
 
             Compensation compensation = new Compensation(employee);
 
@@ -37,27 +39,23 @@ namespace challenge.Controllers
         /// Handle the compensation update
         /// </summary>
         /// 
-        /// I was never thrilled with the black magic of convention programming.
-        /// It's not clear to the reviewer, especially a noob, that this method
-        /// pulls the string from the query parameters and the CompensationInput from
-        /// the request body. The difference being primative versus complex types.
+        /// id is pulled from the query parameters, compensation input is pulled
+        /// from the request body. [FromBody].
         /// 
         /// <param name="id"></param>
         /// <param name="compensationInput"></param>
         /// <returns></returns>
         [HttpPost("{id}", Name = "setCompensation")]
-        public IActionResult SetCompensation(string id, CompensationInput compensationInput)
+        public IActionResult SetCompensation(string id, [FromBody] CompensationInput compensationInput)
         {
             _logger.LogDebug($"Received compensation set request for '{id}'");
 
-            // TODO: validate the incoming variables. Return an error if there is a problem.
-
+            // if the employee can't be found, bail out.
             var employee = _employeeService.GetById(id);
+            if(employee == null)
+                return NotFound();
 
-            // Becuase this isn't a complicated class we'll just copy it instead
-            // of trying to deep copy it. As I understand it, since many of these
-            // are not primitive types they'll be copied by reference and we don't
-            // want that.
+            // Copy the employee so the id can be preserved.
             var updatedEmployee = new Employee()
             {
                 Department = employee.Department,
@@ -70,16 +68,14 @@ namespace challenge.Controllers
                 Salary = employee.Salary
             };
 
-            if (employee != null && updatedEmployee != null)
-            {
-                updatedEmployee.Salary = compensationInput.Salary;
-                updatedEmployee.EffectiveDate = compensationInput.EffectiveDate;
-                updatedEmployee.Salary = new Decimal(155.12);
-                updatedEmployee.EffectiveDate = DateTime.Now;
+            // update the compensation values
+            updatedEmployee.Salary = compensationInput.Salary;
+            updatedEmployee.EffectiveDate = compensationInput.EffectiveDate;
 
-                employee = _employeeService.Replace(employee, updatedEmployee);
-            }
+            // update the employee compensation information
+            employee = _employeeService.Replace(employee, updatedEmployee);
 
+            // create a compensation object
             Compensation compensation = new Compensation(employee);
 
             // Compensation will proably never be null here but doesn't hurt.

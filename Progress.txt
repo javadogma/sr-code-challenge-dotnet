@@ -355,9 +355,16 @@ Seems a bit messy since the compensation contains an employee. Might have been b
 
 WIP for the compensation contoller. Moved the id to the query parameters instead of the request body because I think this follows the API convention better.
 
-Found an intersting clue during debugging. The debugger caught an instance where a new thread was used to handle succesive GET requests. This manifested itself in the EmployeeRepository so I think this supports the idea that there is concurrency issue (well, not really concurrency) but unexpected behavior with respect to the EF when requests come in on different threads.
+Found an intersting clue during debugging. The debugger caught an instance where a new thread was used to handle succesive GET requests. This manifested itself in the EmployeeRepository so I think this supports the idea that there is concurrency issue (well, not really concurrency) but unexpected behavior with respect to the EF when requests come in on different threads. See clue.png.
+
+9:41 PM Sunday, March 20, 2022
+------------------------------
+
+Fixed up the compensation feature. TODO: tests for compensation.
 
 
+
+ 
 
 
 
