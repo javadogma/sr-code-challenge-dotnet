@@ -362,6 +362,19 @@ Found an intersting clue during debugging. The debugger caught an instance where
 
 Fixed up the compensation feature. TODO: tests for compensation.
 
+9:58 PM Sunday, March 20, 2022
+------------------------------
+
+https://stackoverflow.com/questions/32411148/entity-framework-dbcontext-and-thread-safety
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/lock
+
+10:09 PM Monday, March 21, 2022
+-------------------------------
+
+This one looks promissing
+https://docs.microsoft.com/en-us/ef/core/dbcontext-configuration/
+
+Coule be the problem is in the way the employee repository is being used with DI in relation to how the DbContext is being used. The EmployeeContext needs to be injected into the controllers' constructors so the DbContext is scoped to that instance of the controller. The way the code is written the EmployeeRepositry is injected into the controller. The EmployeeRepository is added to the services as a Scoped service meaning it should be created for every call on the controller. The question is, is the DbContext that it has injected is also created per scope or is the EmployeeRepositry somehow haning around. They should be disposed of by the servuce provider. 
 
 
  
