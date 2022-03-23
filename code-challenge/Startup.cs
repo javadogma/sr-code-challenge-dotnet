@@ -32,18 +32,19 @@ namespace code_challenge
                 options.UseInMemoryDatabase("EmployeeDB");
             });
             services.AddScoped<IEmployeeRepository,EmployeeRespository>();
-            services.AddTransient<EmployeeDataSeeder>();
+            services.AddScoped<IEmployeeDataSeeder, EmployeeDataSeeder>();
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, EmployeeDataSeeder seeder)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+            IEmployeeDataSeeder seeder)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                seeder.Seed().Wait();
+                seeder.Seed();
             }
 
             app.UseMvc();

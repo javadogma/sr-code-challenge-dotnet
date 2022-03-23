@@ -37,9 +37,6 @@ namespace challenge.Models
             {
                 if (emp.DirectReports != null)
                 {
-                    // NDB: This check is redundant. If DirectReports isn't null then the count
-                    // should always be > 0. Pain the ass right now becuase of the entity problems.
-                    // when that's solved take out the comments.
                     if(emp.DirectReports.Count > 0)
                     {
                         count += emp.DirectReports.Count;

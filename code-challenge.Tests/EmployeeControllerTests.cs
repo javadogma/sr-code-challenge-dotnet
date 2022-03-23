@@ -26,9 +26,11 @@ namespace code_challenge.Tests.Integration
         [ClassInitialize]
         public static void InitializeClass(TestContext context)
         {
-            _testServer = new TestServer(WebHost.CreateDefaultBuilder()
-                .UseStartup<TestServerStartup>()
-                .UseEnvironment("Development"));
+            var defaultBuilder = WebHost.CreateDefaultBuilder();
+            defaultBuilder = defaultBuilder.UseStartup<TestServerStartup>();
+            defaultBuilder = defaultBuilder.UseEnvironment("Development");
+
+            _testServer = new TestServer(defaultBuilder);
 
             _httpClient = _testServer.CreateClient();
         }

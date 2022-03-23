@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace challenge.Data
 {
-    public class EmployeeDataSeeder
+    public class EmployeeDataSeeder : IEmployeeDataSeeder
     {
         private EmployeeContext _employeeContext;
         private const String EMPLOYEE_SEED_DATA_FILE = "resources/EmployeeSeedData.json";
@@ -18,18 +18,20 @@ namespace challenge.Data
             _employeeContext = employeeContext;
         }
 
-        public async Task Seed()
+        public int Seed()
         {
             if(!_employeeContext.Employees.Any())
             {
                 List<Employee> employees = LoadEmployees();
                 _employeeContext.Employees.AddRange(employees);
 
-                await _employeeContext.SaveChangesAsync();
+                _employeeContext.SaveChanges();
             }
+
+            return 1;
         }
 
-        private List<Employee> LoadEmployees()
+        public List<Employee> LoadEmployees()
         {
             using (FileStream fs = new FileStream(EMPLOYEE_SEED_DATA_FILE, FileMode.Open))
             using (StreamReader sr = new StreamReader(fs))
@@ -44,7 +46,7 @@ namespace challenge.Data
             }
         }
 
-        private void FixUpReferences(List<Employee> employees)
+        public void FixUpReferences(List<Employee> employees)
         {
             var employeeIdRefMap = from employee in employees
                                 select new { Id = employee.EmployeeId, EmployeeRef = employee };

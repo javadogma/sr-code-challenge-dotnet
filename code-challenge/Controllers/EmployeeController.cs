@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using challenge.Services;
 using challenge.Models;
+using challenge.Data;
 
 namespace challenge.Controllers
 {
@@ -14,11 +15,13 @@ namespace challenge.Controllers
     {
         private readonly ILogger _logger;
         private readonly IEmployeeService _employeeService;
+        private readonly EmployeeContext _employeeContext;
 
-        public EmployeeController(ILogger<EmployeeController> logger, IEmployeeService employeeService)
+        public EmployeeController(ILogger<EmployeeController> logger, IEmployeeService employeeService, EmployeeContext employeeContext)
         {
             _logger = logger;
             _employeeService = employeeService;
+            _employeeContext = employeeContext;
         }
 
         [HttpPost]
@@ -49,6 +52,8 @@ namespace challenge.Controllers
         {
             _logger.LogDebug($"Received employee report request for '{id}'");
 
+            var employee = _employeeContext.Employees.SingleOrDefault(e => e.EmployeeId == id);
+            var reportingStructureTest = employee.DirectReports;
             var reportingStructure = _employeeService.GetDirectReports(id);
 
             if (reportingStructure == null)
