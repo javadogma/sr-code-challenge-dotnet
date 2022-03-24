@@ -26,6 +26,8 @@ namespace challenge.Data
                 _employeeContext.Employees.AddRange(employees);
 
                 _employeeContext.SaveChanges();
+
+                var x = _employeeContext.Employees;
             }
 
             return 1;
